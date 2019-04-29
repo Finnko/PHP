@@ -1,10 +1,20 @@
+<?php
+$title = 'PHP';
+$heading = 'Урок 1';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title><?= $title ?></title>
 </head>
 <body>
+<div class="task_4">
+    <h1>
+        <?= $heading ?>
+    </h1>
+    <p> <?= date('Y') ?> год</p>
+</div>
 <div class="task_2">
 <?php
     $a = 'Hello,';
