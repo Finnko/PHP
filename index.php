@@ -76,5 +76,38 @@ $title = 'PHP урок 2';
     }
     ?>
 </div>
+<div class="task3">
+    <?php
+    $a = rand(0, 30);
+    $b = rand(0, 30);
+    echo $a . "<br>" . $b . "<br>";
+
+    function sum($arg1, $arg2){
+        return $arg1 + $arg2;
+    }
+
+    function subtract($arg1, $arg2){
+        return ($arg1 - $arg2);
+    }
+
+    function multiply($arg1, $arg2){
+        return ($arg1 * $arg2);
+    }
+
+    function division($arg1, $arg2){
+        if ($arg2 === 0) {
+            return 'Делить на 0 нельзя';
+        } else {
+            return ($arg1 / $arg2);
+        }
+    }
+
+    echo 'Сумма чисел равна ' . sum($a, $b) . '</br>';
+    echo 'Разность чисел равна ' . subtract($a, $b) . '</br>';
+    echo 'Произведение чисел равно ' . multiply($a, $b) . '</br>';
+    echo 'Деление чисел равно ' . division($a, $b) . '</br>';
+
+    ?>
+</div>
 </body>
 </html>
