@@ -9,18 +9,18 @@ $title = 'PHP урок 2';
 </head>
 <body>
 <div class="task1">
-<!--       --><?php
-//       $a = -5;
-//       $b = 6;
-//
-//       if ($a >= 0 && $b >= 0) {
-//           echo $a - $b;
-//       } else if ($a < 0 && $b < 0) {
-//           echo $a * $b;
-//       } else {
-//           echo $a + $b;
-//       }
-//       ?>
+       <?php
+       $a = -5;
+       $b = 6;
+
+       if ($a >= 0 && $b >= 0) {
+           echo $a - $b;
+       } else if ($a < 0 && $b < 0) {
+           echo $a * $b;
+       } else {
+           echo $a + $b;
+       }
+       ?>
 </div>
 <div class="task2">
     <?php
@@ -87,18 +87,18 @@ $title = 'PHP урок 2';
     }
 
     function subtract($arg1, $arg2){
-        return ($arg1 - $arg2);
+        return $arg1 - $arg2;
     }
 
     function multiply($arg1, $arg2){
-        return ($arg1 * $arg2);
+        return $arg1 * $arg2;
     }
 
     function division($arg1, $arg2){
         if ($arg2 === 0) {
             return 'Делить на 0 нельзя';
         } else {
-            return ($arg1 / $arg2);
+            return $arg1 / $arg2;
         }
     }
 
