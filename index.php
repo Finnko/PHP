@@ -109,5 +109,49 @@ $title = 'PHP урок 2';
 
     ?>
 </div>
+<div class="task4">
+    <?php
+    function mathOperation($arg1, $arg2, $operation){
+        switch ($operation) {
+            case '+':
+            return ($arg1 + $arg2);
+            break;
+
+            case '-':
+            return ($arg1 - $arg2);
+            break;
+
+            case '*':
+            return ($arg1 * $arg2);
+            break;
+
+            case '/':
+            return ($arg1 / $arg2);
+            break;
+        }
+    }
+
+    echo 'Сумма чисел равна ' . mathOperation($a, $b, '+') . '</br>';
+    echo 'Разность чисел равна ' . mathOperation($a, $b, '-') . '</br>';
+    echo 'Произведение чисел равно ' . mathOperation($a, $b, '*') . '</br>';
+    echo 'Деление чисел равно ' . mathOperation($a, $b, '/') . '</br>';
+    ?>
+</div>
+<div class="task6">
+    <?php
+    function power($val, $pow){
+        if ($pow === 1) {
+            return $val;
+        } else if ($pow === 0) {
+            return 1;
+        } else {
+            return ($val * power($val, $pow - 1));
+        }
+    }
+    $val = 5;
+    $pow = 6;
+    echo 'Число ' . $val . ' в степени ' . $pow .  '<br/>' . power($val, $pow);
+    ?>
+</div>
 </body>
 </html>
