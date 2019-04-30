@@ -153,5 +153,45 @@ $title = 'PHP урок 2';
     echo 'Число ' . $val . ' в степени ' . $pow .  '<br/>' . power($val, $pow);
     ?>
 </div>
+<div class="task7">
+    <?php
+
+    function getTime() {
+        $hourCurrent = (int)date('H');
+        $minuteCurrent = (int)date('i');
+
+        return $timeCurrent = getHour($hourCurrent) . ' ' . getMinutes($minuteCurrent);
+    }
+
+    function getHour($h) {
+        $hour = $h % 10;
+
+        if ($h == 1 && $h !=11) {
+            echo $h . ' час ';
+        } else if ($hour = 0 || $hour >= 5 && $hour <= 9 || $h >= 11 && $h <=20) {
+            echo $h . ' часов ';
+        } else {
+            echo $h . ' часа ';
+        }
+        return;
+    }
+
+    function getMinutes($min) {
+        $minutes = $min % 10;
+
+        if ($min == 1 && $min !=11) {
+            echo $min . ' минута ';
+        } else if ($minutes = 0 || $minutes >= 5 && $minutes <= 9 || $min >= 11 && $min <=20) {
+            echo $min . ' минут ';
+        } else {
+            echo $min . ' минуты ';
+        }
+        return;
+    }
+
+    echo getTime();
+
+    ?>
+</div>
 </body>
 </html>
