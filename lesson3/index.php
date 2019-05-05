@@ -73,9 +73,9 @@ $title = 'PHP урок 3';
 </div>
 <br>
 <hr>
-<div class="task4">
+<div class="task4,9">
     <?php
-    echo 'Задание 4' . '</br>';
+    echo 'Задание 4 + 9' . '</br>';
 
     function translate ($string) {
         $converter = [
@@ -112,7 +112,7 @@ $title = 'PHP урок 3';
             'э' => 'e',
             'ю' => 'yu',
             'я' => 'ya',
-            ' ' => ' '
+            ' ' => '_'
         ];
         return strtr($string, $converter);
     };
@@ -131,6 +131,64 @@ $title = 'PHP урок 3';
 
     echo str_replace(' ', '_', $str);
 
+    ?>
+</div>
+<br>
+<hr>
+<div class="task6">
+    <?php
+    echo 'Задание 6' . '</br>';
+
+
+    ?>
+    <ul>
+        <?
+        $menus = [
+            'Home' => 'Home',
+            'Men' => [
+                'Polos', 'T-shirts', 'Sweaters', 'Shoes'
+            ],
+            'Women' => [
+                'T-shirts',
+                'Dresses' => [
+                    'Long', 'Short', 'Trendy', 'Summer'
+                ],
+                'Skirts',
+                'Shoes',
+            ]
+        ];
+        ?>
+        <? foreach ($menus as $menu => $items) :?>
+            <li><?=$menu ?>
+                <ul>
+                    <? if (is_array($items)) :
+                        foreach ($items as $item => $links) : ?>
+                        <li><?=$item ?>
+                            <ul>
+                                <? if (is_array($links)) :
+                                    foreach ($links as $link): ?>
+                                        <li><?=$link?></li>
+                                    <? endforeach;
+                                 else : echo $links . ' ';
+                                endif; ?>
+                            </ul>
+                        </li>
+                        <? endforeach;
+                    endif;?>
+                </ul>
+            </li>
+        <?endforeach;?>
+    </ul>
+</div>
+<br>
+<hr>
+<div class="task7">
+    <?php
+    echo 'Задание 7' . '</br>';
+
+    for ($i = 0; $i <= 9; var_dump($i++) ) {
+
+    }
     ?>
 </div>
 </body>
