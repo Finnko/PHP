@@ -75,6 +75,8 @@ $title = 'PHP урок 3';
 <hr>
 <div class="task4">
     <?php
+    echo 'Задание 4' . '</br>';
+
     function translate ($string) {
         $converter = [
             'а' => 'a',
@@ -116,6 +118,18 @@ $title = 'PHP урок 3';
     };
 
     echo translate('москва не сразу строилась');
+
+    ?>
+</div>
+<br>
+<hr>
+<div class="task5">
+    <?php
+    echo 'Задание 5' . '</br>';
+
+    $str = 'Век живи, век учись';
+
+    echo str_replace(' ', '_', $str);
 
     ?>
 </div>
