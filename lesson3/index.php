@@ -20,6 +20,8 @@ $title = 'PHP урок 3';
     }
     ?>
 </div>
+<br>
+<hr>
 <div class="task2">
     <?php
     $i = 0;
@@ -37,6 +39,11 @@ $title = 'PHP урок 3';
     } while ($i <= 10);
 
     ?>
+</div>
+<br>
+<hr>
+<div class="task3">
+
 </div>
 </body>
 </html>
