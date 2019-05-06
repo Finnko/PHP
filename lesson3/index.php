@@ -191,5 +191,37 @@ $title = 'PHP урок 3';
     }
     ?>
 </div>
+<br>
+<hr>
+<div class="task8">
+    <?php
+    echo 'Задание 8' . '</br>';
+
+    $districts = [
+        'Московская область:' => [
+            'Москва', 'Зеленоград', 'Клин'
+        ],
+        'Ленинградская область:' => [
+            'Санкт-Петербург', 'Всеволжск', 'Павловск', 'Кронштадт'
+        ],
+        'Рязанская область:' => [
+            'Рязань', 'Касимов', 'Лесной'
+        ]
+    ];
+
+    foreach ($districts as $district => $towns) {
+        echo '<br>' . $district . '<br>';
+
+        foreach ($towns as $town) {
+            if (mb_substr($town, 0, 1) === "К") {
+                echo $town . ' ';
+            } else {
+                echo ' ';
+            }
+
+        }
+    };
+    ?>
+</div>
 </body>
 </html>
