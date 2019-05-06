@@ -162,20 +162,22 @@ $title = 'PHP урок 3';
         echo '<li>';
         echo $menu;
         echo  '<ul>';
-        if (is_array($items)) {
-            foreach ($items as $item => $links) {
-                echo '<li>';
+
+        foreach ($items as $item => $links) {
+            echo '<li>';
+
+            if (is_array($links)) {
                 echo '<ul>';
-                if (is_array($links)) {
-                    foreach ($links as $link) {
-                        echo '<li>' . $link . '</li>';
-                    }
-                } else {
-                    echo '<li>' . $links . '</li>';
+                foreach ($links as $link) {
+                    echo '<li>' . $link . '</li>';
                 }
-                echo '</ul></li>';
+                echo '</ul>';
+            } else {
+                echo '<li>' . $links . '</li>';
             }
+            echo '</li>';
         }
+
         echo '</ul></li>';
     }
     echo '</ul>';
