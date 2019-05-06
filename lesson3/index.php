@@ -139,46 +139,47 @@ $title = 'PHP урок 3';
     <?php
     echo 'Задание 6' . '</br>';
 
-
-    ?>
-    <ul>
-        <?
-        $menus = [
-            'Home' => 'Home',
-            'Men' => [
-                'Polos', 'T-shirts', 'Sweaters', 'Shoes'
+    $menus = [
+        'Home' => 'Home',
+        'Men' => [
+            'Polos',
+            'T-shirts',
+            'Sweaters',
+            'Shoes'
+        ],
+        'Women' => [
+            'T-shirts',
+            'Dresses' => [
+                'Long', 'Short', 'Trendy', 'Summer'
             ],
-            'Women' => [
-                'T-shirts',
-                'Dresses' => [
-                    'Long', 'Short', 'Trendy', 'Summer'
-                ],
-                'Skirts',
-                'Shoes',
-            ]
-        ];
-        ?>
-        <? foreach ($menus as $menu => $items) :?>
-            <li><?=$menu ?>
-                <ul>
-                    <? if (is_array($items)) :
-                        foreach ($items as $item => $links) : ?>
-                        <li><?=$item ?>
-                            <ul>
-                                <? if (is_array($links)) :
-                                    foreach ($links as $link): ?>
-                                        <li><?=$link?></li>
-                                    <? endforeach;
-                                 else : echo $links . ' ';
-                                endif; ?>
-                            </ul>
-                        </li>
-                        <? endforeach;
-                    endif;?>
-                </ul>
-            </li>
-        <?endforeach;?>
-    </ul>
+            'Skirts',
+            'Shoes',
+        ]
+    ];
+    echo '<ul>';
+
+    foreach ($menus as $menu => $items) {
+        echo '<li>';
+        echo $menu;
+        echo  '<ul>';
+        if (is_array($items)) {
+            foreach ($items as $item => $links) {
+                echo '<li>';
+                echo '<ul>';
+                if (is_array($links)) {
+                    foreach ($links as $link) {
+                        echo '<li>' . $link . '</li>';
+                    }
+                } else {
+                    echo '<li>' . $links . '</li>';
+                }
+                echo '</ul></li>';
+            }
+        }
+        echo '</ul></li>';
+    }
+    echo '</ul>';
+    ?>
 </div>
 <br>
 <hr>
