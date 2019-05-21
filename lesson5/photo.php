@@ -3,9 +3,8 @@
 $link = mysqli_connect(
     'localhost',
     'root',
-    'root1234',
-    'gbphp',
-    '8888'
+    'root',
+    'gbphp'
 );
 
 if (!empty($_GET['id'])) {

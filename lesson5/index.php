@@ -3,11 +3,9 @@
 $link = mysqli_connect(
     'localhost',
     'root',
-    '',
-    'gbphp',
-    '8888'
+    'root',
+    'gbphp'
 );
-var_dump($link);
 
 $sql = "SELECT id, url, name, count FROM gallery ORDER BY gallery . count DESC";
 $res = mysqli_query($link, $sql);
