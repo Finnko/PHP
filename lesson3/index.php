@@ -226,5 +226,36 @@ $title = 'PHP урок 3';
     };
     ?>
 </div>
+<hr>
+<br>
+<div class="task11">
+    <?php
+    $menu = [
+        'Главная' => 'Главная',
+        'Новости' => [
+            'Новости о спорте',
+            'Новости о политике',
+            'Новости о мире'
+        ],
+        'Контакты' => 'Контакты',
+        'Справка' => 'Справка'
+    ];
+    echo '<nav>';
+    foreach ($menu as $key => $value) {
+        var_dump($value);
+        if (is_array($value)) {
+            echo '<div>' . '<a>' . '<span>' . $key . '</span>' . '</a>' . '<div>';
+            foreach ($value as $news) {
+                echo '<a>' . $news . '</a>';
+            }
+            echo '</div>';
+            echo '</div>';
+        } else {
+            echo '<div>' . '<a>' . '<span>' . $key . '</span>' . '</a>' . '</div>';
+        }
+    }
+    echo '</nav>';
+    ?>
+</div>
 </body>
 </html>
